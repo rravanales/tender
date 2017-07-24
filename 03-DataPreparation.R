@@ -11,6 +11,9 @@ head(sectors)
 head(trips)
 base <- left_join(dispatches, sectors, by="idSector")
 base <- left_join(base, trips, by="idTrip")
+head(base)
+head(services)
+base <- left_join(base, services, by="idService")
 
 #### Data transformation #### 
 
