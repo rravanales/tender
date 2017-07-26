@@ -1,63 +1,59 @@
 # Chapter 02 - Import Data
 
-####  Load External data: Client #########################################
 
-###   Dispatches
-dispatches <- read.xlsx2(
-  file       = "Data/ClientDB.xlsx", 
-  sheetName  = "Dispatches", 
-  colClasses = c("Date", rep("numeric", 3))
+# 2.1 Load External data: Client ----------------------------------------------
+
+# 2.1.1 - Dispatches ----------------------------------------------------------
+c.dispatches <- read.xlsx(
+  xlsxFile    = "Data/ClientDB.xlsx", 
+  sheet       = "Dispatches", 
+  detectDates = TRUE
 )
-head(dispatches)
+str(c.dispatches)
 
-###   Sectors
-sectors <- read.xlsx2(
-  file       = "Data/ClientDB.xlsx", 
-  sheetName  = "Sectors", 
-  colClasses = c("numeric", "character", rep("numeric", 5))
+# 2.1.2 - Sectors -------------------------------------------------------------
+c.sectors <- read.xlsx(
+  xlsxFile    =  "Data/ClientDB.xlsx", 
+  sheet       = "Sectors"
 )
-head(sectors)
+str(c.sectors)
 
-###   Trips
-trips <- read.xlsx2(
-  file       = "Data/ClientDB.xlsx", 
-  sheetName  = "Trips", 
-  colClasses = c("numeric", "character")
+# 2.1.3 - Trips ---------------------------------------------------------------
+c.trips <- read.xlsx(
+  xlsxFile    = "Data/ClientDB.xlsx", 
+  sheet       = "Trips"
 )
-head(trips)
+str(c.trips)
 
-###   Jobs
-jobs <- read.xlsx2(
-  file       = "Data/ClientDB.xlsx", 
-  sheetName  = "Jobs", 
-  colClasses = c("numeric", "character")
+# 2.1.4 - Jobs ----------------------------------------------------------------
+c.jobs <- read.xlsx(
+  xlsxFile    = "Data/ClientDB.xlsx", 
+  sheet       = "Jobs"
 )
-head(jobs)
+str(c.jobs)
 
 
 
-####  Load Internal data: Supplier #########################################
+# 2.2 Load Internal data: Supplier --------------------------------------------
 
-###   Services
-services <- read.xlsx2(
-  file       = "Data/SupplierDB.xlsx", 
-  sheetName  = "Services", 
-  colClasses = c("numeric", "character")
+# 2.2.1 - Services ------------------------------------------------------------
+s.services <- read.xlsx(
+  xlsxFile    = "Data/SupplierDB.xlsx", 
+  sheet       = "Services"
 )
-head(services)
+str(s.services)
 
-###   SetVehicles
-setVehicles <- read.xlsx2(
-  file       = "Data/SupplierDB.xlsx", 
-  sheetName  = "SetVehicles",
-  colClasses = c(rep("numeric",3), "character")
+# 2.2.2 - SetVehicles ---------------------------------------------------------
+s.setVehicles <- read.xlsx(
+  xlsxFile    = "Data/SupplierDB.xlsx", 
+  sheet       = "SetVehicles"
 )
-head(setVehicles)
+str(s.setVehicles)
 
-###   Prices
-prices <- read.xlsx2(
-  file       = "Data/SupplierDB.xlsx", 
-  sheetName  = "Prices",
-  colClasses = c(rep("numeric",3), "character")
+# 2.2.3 - Prices --------------------------------------------------------------
+s.prices <- read.xlsx(
+  xlsxFile    = "Data/SupplierDB.xlsx", 
+  sheet       = "Prices",
+  detectDates = TRUE
 )
-head(prices)
+str(s.prices)

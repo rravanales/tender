@@ -1,16 +1,18 @@
 # Chapter 01 - Packages
 
-####  Download and install the packages from CRAN ####
-# install.packages("xlsx")
+# 1.1 Download and install the packages from CRAN -----------------------------
+# install.packages("openxlsx")
 # install.packages("dplyr")
-# install.packages("sqldf")
 # install.packages("ggplot2")
+# install.packages("lpSolve")
 
 
-####  Load the package into the session ####
-library(xlsx)
+# 1.2 Load the package into the session ---------------------------------------
+library(openxlsx)
 library(dplyr)
 library(ggplot2)
+library(lpSolve)
 
-####  Load own libraries ####
-#source("myLibrary.R",local = TRUE)
+
+# 1.2 Load own libraries ------------------------------------------------------
+# source("myLibrary.R",local = TRUE)

@@ -1,21 +1,24 @@
 # Chapter 03 - Data Preparation
 
-####  Data cleansing ####
-# Missing values
-dispatches  <- subset(dispatches, !is.nan(kilograms))
+
+# 3.1 Data cleansing ------------------------------------------------------
+
+c.dispatches_with_na = c.dispatches
+
+# 3.1.1 - Missin Values ---------------------------------------------------
+c.dispatches  <- subset(c.dispatches, !is.na(kilograms))
 
 
-#### Data integration ####
-# Merging/joining data sets
-head(sectors)
-head(trips)
-base <- left_join(dispatches, sectors, by="idSector")
-base <- left_join(base, trips, by="idTrip")
-head(base)
-head(services)
-base <- left_join(base, services, by="idService")
+# 3.2 Data integration ----------------------------------------------------
 
-#### Data transformation #### 
+# 3.2.1 - Merging/joining data sets ---------------------------------------
+base <- left_join(c.dispatches, c.sectors, by="idSector")
+base <- left_join(base, c.trips, by="idTrip")
+base <- left_join(base, s.services, by="idService")
+
+
+# 3.3 Data transformation -------------------------------------------------
+
 
 
 
