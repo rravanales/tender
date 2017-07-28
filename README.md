@@ -7,8 +7,8 @@ tender transport
 
 ###### What:
 1. Price by trip and kind of sector
-  * a.- Counts of vehicles by services
-  * b.- Counts of trips
+  * a.- Number of vehicles per services
+  * b.- Number of trips
   * c.- Capacity of vehicles
 
 ###### Why: 
