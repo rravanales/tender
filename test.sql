@@ -1,2 +1,2 @@
 select * from ba_cl_pe.pivotal
-limit 100
+limit 1000
